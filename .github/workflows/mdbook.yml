@@ -47,9 +47,8 @@ jobs:
           cargo install --version ${MDBOOK_PANDOC_VERSION} mdbook-pandoc
 
       - name: Install lualatex
-        uses: ConorMacBride/install-package@v1
-        with:
-          apt:  texlive-luatex texlive-latex-base texlive-latex-extra  texlive-science  	texlive-full
+        run: |
+          sudo apt-get install  texlive-luatex texlive-latex-base  texlive-science texlive-latex-extra    	
 
       - name: Install Google Fonts
         run: |
