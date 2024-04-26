@@ -34,9 +34,11 @@ jobs:
     steps:
 
      - name: Install lualatex
+        #  We wanted to run 
+        # sudo apt-get install  texlive-luatex texlive-latex-base  texlive-science texlive-latex-extra    	
+        # We need texlive 2023 at least and that is not yet available in ubuntu 22.04 - this is excessive:
+
         run: |
-#          sudo apt-get install  texlive-luatex texlive-latex-base  texlive-science texlive-latex-extra    	
-# We need texlive 2023 at least and that is not yet available in ubuntu 22.04 - this is excessive:
            curl -L -o install-tl-unx.tar.gz ftp://tug.org/historic/systems/texlive/2023/tlnet-final/install-tl-unx.tar.gz 
            zcat < install-tl-unx.tar.gz | tar xf -
            cd install-tl-2*
