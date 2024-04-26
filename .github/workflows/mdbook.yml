@@ -2,6 +2,12 @@
 #
 # To get started with mdBook see: https://rust-lang.github.io/mdBook/index.html
 #
+#  We wanted to run 
+        # sudo apt-get install  texlive-luatex texlive-latex-base  texlive-science texlive-latex-extra    	
+        # We need texlive 2023 at least and that is not yet available in ubuntu 22.04 - that is why the latex install is excessive
+
+
+
 name: Deploy mdBook site to Pages
 
 on:
@@ -33,11 +39,7 @@ jobs:
       MDBOOK_PANDOC_VERSION: 0.6.4
     steps:
 
-     - name: Install lualatex
-        #  We wanted to run 
-        # sudo apt-get install  texlive-luatex texlive-latex-base  texlive-science texlive-latex-extra    	
-        # We need texlive 2023 at least and that is not yet available in ubuntu 22.04 - this is excessive:
-
+     - name: Install lualatex        
         run: |
            curl -L -o install-tl-unx.tar.gz ftp://tug.org/historic/systems/texlive/2023/tlnet-final/install-tl-unx.tar.gz 
            zcat < install-tl-unx.tar.gz | tar xf -
