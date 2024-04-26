@@ -87,7 +87,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with mdBook
-        run: mdbook build
+        run: export PATH=/usr/local/texlive/2023/bin/x86_64-linux:${PATH} && mdbook build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
