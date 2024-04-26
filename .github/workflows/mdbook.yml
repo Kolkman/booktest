@@ -49,15 +49,15 @@ jobs:
            echo "tlpdbopt_install_srcfiles 0" >> install.profile
            echo "tlpdbopt_autobackup 0" >> install.profile
            echo "tlpdbopt_sys_bin /usr/bin" >> install.profile
-           perl ./install-tl --no-interaction  --no-doc-install --no-src-install -repository ftp://tug.org/historic/systems/texlive/2023/tlnet-final
+           sudo perl ./install-tl --no-interaction  --no-doc-install --no-src-install -repository ftp://tug.org/historic/systems/texlive/2023/tlnet-final
            ls -l /usr/local/texlive/2023/bin
            export PATH=/usr/local/texlive/2023/bin/x86_64-linux:${PATH}
-           /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install unicode-math
-           /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install lualatex-math
-           /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install xcolor
-           /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install luatexbase
-           /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install selnolig
-           /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install titling
+           sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install unicode-math
+           sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install lualatex-math
+           sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install xcolor
+           sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install luatexbase
+           sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install selnolig
+           sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install titling
         
            
       - uses: actions/checkout@v4
