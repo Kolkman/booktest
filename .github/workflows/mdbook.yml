@@ -36,7 +36,7 @@ jobs:
         run: |
           wget -O Hind-Light.ttf https://github.com/google/fonts/raw/main/ofl/hind/Hind-Light.ttf
           mkdir -p /usr/share/fonts/truetype/Hind/
-          cp Hind-Lioght.ttf /usr/share/fonts/truetype/Hind/
+          cp Hind-Light.ttf /usr/share/fonts/truetype/Hind/
           fc-cache -fv
       - name: Install mdBook
         run: |
