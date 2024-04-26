@@ -35,7 +35,7 @@ jobs:
       - name: Install pandoc and lualatex
         uses: ConorMacBride/install-package@v1
         with:
-          apt:  texlive-full pandoc
+          apt:  texlive-luatex texlive-latex pandoc
 
       - name: Install Google Fonts
         run: |
