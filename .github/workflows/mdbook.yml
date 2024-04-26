@@ -40,7 +40,7 @@ jobs:
     steps:
 
      - name: Install lualatex        
-        run: |
+       run: |
            curl -L -o install-tl-unx.tar.gz ftp://tug.org/historic/systems/texlive/2023/tlnet-final/install-tl-unx.tar.gz 
            zcat < install-tl-unx.tar.gz | tar xf -
            cd install-tl-2*
