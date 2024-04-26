@@ -47,7 +47,7 @@ jobs:
       - name: Install pandoc 
         uses: ConorMacBride/install-package@v1
         with:
-          apt:  texlive-luatex pandoc
+          apt:  texlive-full texlive-lualatex pandoc
 
       - name: Setup Pages
         id: pages
