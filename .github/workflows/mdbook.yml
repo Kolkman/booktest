@@ -49,7 +49,7 @@ jobs:
            echo "tlpdbopt_install_srcfiles 0" >> install.profile
            echo "tlpdbopt_autobackup 0" >> install.profile
            echo "tlpdbopt_sys_bin /usr/bin" >> install.profile
-           sudo perl ./install-tl --no-interaction  --no-doc-install --no-src-install -repository ftp://tug.org/historic/systems/texlive/2023/tlnet-final
+           sudo perl ./install-tl --no-interaction  -profile install.profile -repository ftp://tug.org/historic/systems/texlive/2023/tlnet-final
            ls -l /usr/local/texlive/2023/bin
            export PATH=/usr/local/texlive/2023/bin/x86_64-linux:${PATH}
            sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install unicode-math
