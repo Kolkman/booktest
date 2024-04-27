@@ -93,6 +93,9 @@ jobs:
         with:
           path: ./book/html
 
+
+
+
   # Deployment job
   deploy:
     environment:
@@ -104,3 +107,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          files: |
+            ./book/pandoc/pdf/IETF-Ornithology.pdf
+            
