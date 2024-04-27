@@ -23,12 +23,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      
-      - name: Release
-        uses: ncipollo/release-action@v1
+      - name: Update nightly release
+        uses: eine/tip@master
         with:
-         draft: true
-         prerelease: true
-         allowUpdates: true
-         artifacts: "./book.toml"
-         tag: "nightly"
+          tag: nightly
+          rm: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: books.toml     
+
