@@ -93,7 +93,14 @@ jobs:
         with:
           path: ./book/html
 
-
+      - name: Tagged Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          draft: true
+          prerelease: false
+          files: |
+            ./book/pandoc/pdf/IETF-Ornithology.pdf
 
 
   # Deployment job
