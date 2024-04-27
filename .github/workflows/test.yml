@@ -32,4 +32,3 @@ jobs:
          allowUpdates: true
          artifacts: "./book.toml"
          tag: "nightly"
-         commit: ${{ github.sha }}
