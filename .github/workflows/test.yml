@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update nightly release
-        uses: eine/tip@master
+        uses: epyTooling/Actions/releaser@main
         with:
           tag: nightly
           rm: true
