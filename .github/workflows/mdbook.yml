@@ -88,6 +88,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with mdBook
         run: export PATH=/usr/local/texlive/2023/bin/x86_64-linux:${PATH} && mdbook build
+      - name: Copy the PDF to html root
+        run: cp /book/pandoc/pdf/IETF-Ornithology.pdf ./book/html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
