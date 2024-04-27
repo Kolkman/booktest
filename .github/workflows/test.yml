@@ -25,7 +25,7 @@ jobs:
       - name: Generate Changelog
         run: echo "# Good things have arrived" > ${{ github.workspace }}-CHANGELOG.txt
       - name: Release
- - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "book.toml"
-        tag: "nightly"
+        uses: ncipollo/release-action@v1
+        with:
+         artifacts: "book.toml"
+         tag: "nightly"
